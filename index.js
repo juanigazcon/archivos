@@ -49,7 +49,7 @@ contenedor.getById(8)
 .catch(err => console.log (err))
 
 
-contenedor.findAll()
+contenedor.getAll()
 .then (result=> console.log(result))
 .catch(err => console.log (err))
 

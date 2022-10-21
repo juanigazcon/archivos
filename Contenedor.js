@@ -65,7 +65,7 @@ class Contenedor {
         }
     }
 
-    findAll = async () => {
+    getAll = async () => {
 
         try{    
         if(fs.existsSync(file)){
@@ -121,7 +121,7 @@ class Contenedor {
             products= []
             await fs.promises.writeFile(file, JSON.stringify(products, null, 2))
             return {status:"Success", message: "Products have been successfully deleted"}
-            
+
             } else return {status: "Error", message:"There are no products to delete"}
         } else{
             return{status: "Error", message:"File doesn´t exist"}
